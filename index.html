@@ -157,6 +157,64 @@
         
         .blink { animation: blinker 1.5s linear infinite; }
         @keyframes blinker { 50% { opacity: 0.3; } }
+        /* --- KODE DISCORD LINK --- */
+        .discord-message-container {
+            font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            background-color: #0c0f16; /* Disesuaikan dengan warna card website Anda */
+            padding: 10px 0;
+            color: var(--text-main);
+            margin-bottom: 20px;
+        }
+
+        .discord-time {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .discord-link {
+            color: #00a8fc;
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            display: inline-block;
+            font-family: Arial, sans-serif; /* Font standar agar mirip discord */
+        }
+
+        .discord-link:hover { text-decoration: underline; }
+
+        .discord-edited { font-size: 11px; color: var(--text-muted); margin-left: 5px; }
+
+        .discord-link::after {
+            content: attr(data-tooltip);
+            white-space: pre-wrap;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            background-color: #111214;
+            color: #dbdee1;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.1s ease-in-out;
+            pointer-events: none;
+            z-index: 100;
+            min-width: max-content;
+            margin-bottom: 5px;
+            font-family: "gg sans", "Noto Sans", Arial, sans-serif;
+        }
+
+        .discord-link:hover::after { opacity: 1; visibility: visible; }
+        /* --- BATAS KODE DISCORD LINK --- */
     </style>
 </head>
 <body>
@@ -178,6 +236,18 @@
             <p><strong>SEMUA TRANSAKSI DI ATAS HANYA DAPAT DILAKUKAN DI DALAM GAME (VIA IN-CHARACTER / IC ROLEPLAY).</strong> Segala bentuk koordinasi, pembayaran, dan transaksi wajib mematuhi aturan server. Dilarang keras membawa elemen ini ke ranah Out-of-Character (OOC) atau dunia nyata!</p>
         </div>
 
+        <div class="discord-message-container">
+            <span class="discord-time">1:59 PM</span>
+            <div class="discord-content">
+                <a 
+                    href="https://fadlipradipka-coder.github.io/kdo-dark-net/" 
+                    class="discord-link" 
+                    data-tooltip="TAP HERE TO VIEW PRICE LIST&#10;(https://fadlipradipka-coder.github.io/kdo-dark-net/)">
+                    TAP HERE TO VIEW PRICE LIST
+                </a>
+                <span class="discord-edited">(edited)</span>
+            </div>
+        </div>
         <div class="grid-layout">
             <div>
                 <div class="table-container">
