@@ -22,7 +22,7 @@
             --text-muted: #64748b;
             --accent-red: #ef4444;
             --accent-green: #22c55e;
-            --accent-amber: #c0c0c0; /* Dirubah ke silver agar cocok dengan logo */
+            --accent-amber: #c0c0c0;
             --font-terminal: 'Courier New', Courier, monospace;
         }
 
@@ -76,7 +76,6 @@
 
         .status-bar span.active { color: var(--accent-green); font-weight: bold; }
 
-        /* Critical Warning Box */
         .warning-box {
             background-color: rgba(239, 68, 68, 0.06);
             border: 1px solid var(--accent-red);
@@ -86,9 +85,8 @@
         }
 
         .warning-box h3 { color: var(--accent-red); font-size: 14px; margin-bottom: 5px; }
-        .warning-box p { font-size: 12px; color: #fca5a5; }
+        .warning-box p { font-size: 12px; color: #fca5a5; text-align: justify; }
 
-        /* Instructions Box */
         .instructions-box {
             background-color: rgba(245, 158, 11, 0.05);
             border: 1px solid var(--border-color);
@@ -114,6 +112,7 @@
             background: #0a0d14;
             padding: 10px;
             border: 1px solid #1e293b;
+            text-align: justify; /* Membuat teks box rata kanan kiri */
         }
 
         .instructions-box ol {
@@ -121,17 +120,11 @@
             font-size: 13px;
             color: var(--text-main);
             line-height: 1.8;
+            text-align: justify; /* Membuat list rata kanan kiri */
         }
 
-        .instructions-box ol li {
-            margin-bottom: 8px;
-            padding-left: 5px;
-        }
-
-        .instructions-box ol li span.highlight {
-            color: var(--accent-green);
-            font-weight: bold;
-        }
+        .instructions-box ol li { margin-bottom: 8px; padding-left: 5px; }
+        .instructions-box ol li span.highlight { color: var(--accent-green); font-weight: bold; }
 
         .grid-layout { display: grid; grid-template-columns: 1fr; gap: 25px; }
         @media (min-width: 850px) { .grid-layout { grid-template-columns: 1.2fr 1fr; } }
@@ -169,7 +162,8 @@
 
         <div class="status-bar">
             <div>NETWORK: <span class="active">ENCRYPTED (ONION-ROUTER)</span></div>
-            <div>ATTENTION: <span style="color: var(--accent-amber);">Read the requirements and steps on the last page.</span></div>            <div>CURRENCY: <span style="color: #fff;">USD ($)</span></div>
+            <div>ATTENTION: <span style="color: var(--accent-amber);">Read the requirements and steps on the last page.</span></div>            
+            <div>CURRENCY: <span style="color: #fff;">USD ($)</span></div>
         </div>
 
         <div class="warning-box">
@@ -178,6 +172,7 @@
         </div>
 
         <div class="grid-layout">
+            
             <div>
                 <div class="table-container">
                     <div class="section-title">WEAPON SUPPLY LIST</div>
@@ -243,15 +238,16 @@
                         <text x="150" y="100" fill="#475569" font-size="80" font-weight="bold" font-family="monospace" text-anchor="middle" dominant-baseline="central" class="blink">?</text>
                     </svg>
                     <div class="map-coords">SECURE DROP ZONE COORDS: [Location is uncertain and always changes for every different transaction]</div>
-            </div>
-        </div>
-
+                </div>
+            </div> 
+            </div> 
         <div class="instructions-box">
             <h3>/// OPERATIONAL PROTOCOL & PROCEDURES ///</h3>
             <p><strong>NOTE:</strong> Contact or meet us at one of our frequently visited turfs, then mention the code <strong style="color: var(--accent-amber);">"KD-Operations"</strong> to one of our crew members as the initial verification step.<br>
                 <em>(Hubungi atau temui kami di salah satu wilayah yang sering kami kunjungi, lalu sebutkan kode <strong style="color: var(--accent-amber);">"KD-Operations"</strong> kepada salah satu anggota kru kami sebagai langkah verifikasi awal.)</em></p>
+            
             <h3 style="margin-top: 25px;">/// REQUIREMENTS & STEPS ///</h3>
-<ol>
+            <ol>
                 <li>Come to one of our turfs and find us. <br> <em>(Datanglah ke salah satu turf kami dan temui keberadaan kami.)</em></li>
                 <li>Approach one of us and mention the code "KD-Operations" for initial verification. <br> <em>(Temui salah satu dari kami, lalu sebutkan kode "KD-Operations" sebagai verifikasi tahap awal.)</em></li>
                 <li>Wearing masks and carrying illegal items is strictly prohibited. <br> <em>(Dilarang menggunakan mask dan membawa barang ilegal.)</em></li>
@@ -264,17 +260,19 @@
                 <li>Tune in to radio frequency 505 for updates on your order status. <br> <em>(Masuk ke frekuensi radio 505 untuk informasi proses pesanan yang telah siap.)</em></li>
                 <li>Once the order is ready, a specific location for the transaction will be confirmed. <br> <em>(Setelah pesanan siap, akan dikonfirmasikan lokasi yang akan ditentukan untuk melakukan transaksi.)</em></li>
             </ol>
+        </div> 
+        <div class="warning-box" style="margin-top: 20px; border-left: 5px solid var(--accent-red);">
+            <h3><span class="blink">⚠️ WARNING / PERINGATAN</span></h3>
+            <p><strong>Strictly forbidden to leak information from this website, such as the "KD-Operations" code, radio frequencies, or other sensitive data.</strong></p>
+            <p><em>(Dilarang keras menyebarluaskan informasi pada website seperti; Kode "KD-Operations", Frekuensi radio, dan informasi sensitif lainnya.)</em></p>
+            <p style="margin-top: 10px;"><strong>Transacting with us is not a trivial matter. Any actions that harm our crew will result in lethal consequences for the buyer.</strong></p>
+            <p><em>(Melakukan transaksi kepada kami bukanlah suatu hal yang biasa. Apabila ada suatu hal yang dapat merugikan kami, pembeli berhak mendapatkan konsekuensi berupa nyawa.)</em></p>
+        </div>
 
-            <div class="warning-box" style="margin-top: 20px; border-left: 5px solid var(--accent-red);">
-                <h3><span class="blink">⚠️ WARNING / PERINGATAN</span></h3>
-                <p><strong>Strictly forbidden to leak information from this website, such as the "KD-Operations" code, radio frequencies, or other sensitive data.</strong></p>
-                <p><em>(Dilarang keras menyebarluaskan informasi pada website seperti; Kode "KD-Operations", Frekuensi radio, dan informasi sensitif lainnya.)</em></p>
-                <p style="margin-top: 10px;"><strong>Transacting with us is not a trivial matter. Any actions that harm our crew will result in lethal consequences for the buyer.</strong></p>
-                <p><em>(Melakukan transaksi kepada kami bukanlah suatu hal yang biasa. Apabila ada suatu hal yang dapat merugikan kami, pembeli berhak mendapatkan konsekuensi berupa nyawa.)</em></p>
-            </div>
-            <div class="footer">
+        <div class="footer">
             <p>The Strapped Lads Crew v3.0 // Secure Net Portal v3.5 // authorized PERSONNEL only.</p>
         </div>
-    </div>
-</body>
+
+    </div> 
+    </body>
 </html>
